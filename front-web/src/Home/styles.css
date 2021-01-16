@@ -1,7 +1,6 @@
 .home-container {
     padding-top: 100px;
-    height: calc(100vh - 254px);
-    background-color: beige;
+    height: calc(100vh - 254px); /*100vh: 100% do dispositivo - 254px do rodapé.*/
   }
   
   .home-container h1 {
