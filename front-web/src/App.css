@@ -8,15 +8,18 @@
   --light-color: #F5F5F5;
 }
 
+/*Zerando os espaçamentos externos e internos de toda a aplicação*/
 html, body {
   margin: 0;
   padding:0;
 }
 
+/*Definindo a fámilia de toda a aplicação*/
 body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/*Removendo o sublinhado de todos os links da aplicação*/
 a {
   text-decoration: none;
 }

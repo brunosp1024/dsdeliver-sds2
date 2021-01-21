@@ -3,7 +3,7 @@ import Home from "./Home"
 import Orders from "./Orders"
 import Navbar from './Navbar';
 
-function Routers() {
+function Routes() {
     return (
 
         /*gerenciador de rotas */
@@ -25,4 +25,4 @@ function Routers() {
     )
 }
 
-export default Routers;
+export default Routes;
