@@ -23,7 +23,7 @@ type Props = {
 }
 
 
-function OrderLocation({ onChangeLocation}: Props) {
+function OrderLocation({ onChangeLocation }: Props) {
 
     const [address, setAddress] = useState<Place>({
         position: initialPosition
@@ -48,11 +48,11 @@ function OrderLocation({ onChangeLocation}: Props) {
 
     const handleChangeSelect = (place: Place) => {
         setAddress(place);
-        //onChangeLocation({
-        //    latitude: place.position.lat,
-        //    longitude: place.position.lng,
-        //    address: place.label!
-        //});
+        onChangeLocation({
+            latitude: place.position.lat,
+            longitude: place.position.lng,
+            address: place.label!
+        });
     };
 
     return (
@@ -69,7 +69,12 @@ function OrderLocation({ onChangeLocation}: Props) {
                         onChange={value => handleChangeSelect(value as Place)}
                     />
                 </div>
-                <MapContainer center={address.position} zoom={16} key={address.position.lat} scrollWheelZoom>
+
+                <MapContainer 
+                    center={address.position} 
+                    zoom={16} 
+                    key={address.position.lat} 
+                    scrollWheelZoom={false}>
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -80,6 +85,7 @@ function OrderLocation({ onChangeLocation}: Props) {
                         </Popup>
                     </Marker>
                 </MapContainer>
+
             </div>
         </div>
     )
